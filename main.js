@@ -95,6 +95,7 @@ const resetAllFields = () => {
     numberOfPeople.value = '';
     tipCustom.value = '';
     resetRadio();
+    resetError();
     console.log(inputObject)
 
     revealResetButton();
@@ -116,4 +117,11 @@ for (const radio of tipNumber) {
             tipCustom.value = '';
         }
     })
+}
+
+function resetError() {
+    const errorState = document.querySelectorAll('.error');
+    for(const element of errorState) {
+        element.classList.replace('error', 'noerror');
+    }
 }
