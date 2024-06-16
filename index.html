@@ -1,44 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <img src="./images/logo.svg" alt="Splitter Logo" class="logo">
+  <main>
+    <div class="leftside">
+      <form action="" novalidate>
+        <label for="bill">
+          <p class="akalabel">Bill</p><input type="text" id="bill" name="bill" placeholder="0">
+        </label>
+        <p class="akalabel">Select Tip %</p>
+        <div class="selecttip">
+          <label for="five" class="tipselect">5%<input type="radio" name="tip" id="five" value="5">
+          </label>
+          <label for="ten" class="tipselect">10%<input type="radio" name="tip" id="ten" value="10">
+          </label>
+          <label for="fifteen" class="tipselect">15%<input type="radio" name="tip" id="fifteen" value="15">
+          </label>
+          <label for="twentyfive" class="tipselect">25%<input type="radio" name="tip" id="twentyfive" value="25">
+          </label>
+          <label for="fifty" class="tipselect">50%<input type="radio" name="tip" id="fifty" value="50">
+          </label>
+          <input type="text" id="custom" name="tip" placeholder="Custom">
+        </div>
+        </label>
+        <label for="number">
+          <div class="flexrow">
+            <p class="akalabel">Number of People</p>
+            <p class="akalabel noerror">Wrong data</p>
+          </div><input type="text" id="number" name="number" placeholder="0" class="noerror">
+        </label>
+      </form>
+    </div>
+    <div class="rightside">
+      <div class="allsums">
+        <div class="sumfield">
+          <span class="akalabel">
+            Tip Amount <br>
+            <span class="light">/ person</span>
+          </span>
+          <p id="tipamount">$0.00</p>
+        </div>
+        <div class="sumfield">
+          <span class="akalabel">
+            Total <br>
+            <span class="light">/ person</span>
+          </span>
+          <p id="total">$0.00</p>
+        </div>
+      </div>
+      <button>Reset</button>
+    </div>
+  </main>
+  <script src="./main.js"></script>
 </body>
+
 </html>
