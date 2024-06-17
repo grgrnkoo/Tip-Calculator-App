@@ -33,7 +33,7 @@ form.addEventListener('change', (e) => {
 // Validation 
 
 const validateNumber = (number) => {
-    if (Number(number) <= 0) {
+    if ((Number(number) <= 0) || !Number(number)) {
         const togglingClass = document.querySelectorAll('.noerror');
 
         for (const element of togglingClass) {
